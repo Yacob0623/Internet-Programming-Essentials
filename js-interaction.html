@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+	Student Name: Yacob Hiben
+	Date:11/25/2024
+	File Name: js-interaction.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interaction - Internet Programming Essentials</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+	<div class="title-logo">
+<h1>Internet Programming Essentials</h1>
+        <img src="images/logo.jfif" alt="Logo" id="logo" class="logo">
+</div>
+        <button id="menu-button" class="menu-button">☰ Menu</button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="js-interaction.html">JavaScript</a></li>
+                <li><a href="css-grid-layout.html">CSS Grid</a></li>
+                <li><a href="bootstrap-layout.html">Bootstrap</a></li>
+                <li><a href="projects-showcase.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1>JavaScript Interaction</h1>
+<p> In this page JavaScript targets and changes the appearance/behavior of an element on the page other than the nav.</p>
+<p style="color: blue;"><em>// Flag to track if the box has already been clicked<br>
+let isClicked = false;<br>
+
+// Changes the appearance of the box element on click<br>
+function changeBoxAppearance() {<br>
+    const box = document.getElementById("colorBox");<br>
+    
+    if (!isClicked) {<br>
+        // First click: Show text and image<br>
+        box.style.backgroundColor = "lightblue";<br>
+        box.style.color = "white";<br>
+        box.innerText = "Style Changed Using: ";<br>
+
+        // Create and insert an image element<br>
+        const img = document.createElement("img");<br>
+        img.src = "images/js.png"; // Replace with your image source<br>
+        img.alt = "Box Image";<br>
+
+        // Append the image to the box<br>
+        box.appendChild(img);<br>
+
+        // Set flag to true after the first click<br>
+        isClicked = true;<br>
+    } else {<br>
+        // Second click: Restore text and remove the image<br>
+        box.style.backgroundColor = "";  // Reset background color<br>
+        box.style.color = "";            // Reset text color<br>
+        box.innerText = "Click to Change!";  // Restore the original text<br>
+
+        // Remove the image if it exists<br>
+        const existingImage = box.querySelector("img");<br>
+        if (existingImage) {<br>
+            existingImage.remove();<br>
+        }<br>
+
+        // Set flag back to false for the next cycle<br>
+        isClicked = false;<br>
+    }<br>
+}</em></p>
+    <div class="interaction-container">
+        <button onclick="changeBoxAppearance()" class="action-button">Click Me</button>
+        <div id="colorBox" class="box">I will change when clicked!</div>
+    </div>
+</main>
+    <footer>
+        <p>&copy; 2024 Yacob Hiben</p>
+    </footer>
+</body>
+</html>

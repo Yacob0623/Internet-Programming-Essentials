@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+	Student Name: Yacob Hiben
+	Date:11/25/2024
+	File Name: bootstrap-layout.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout - Internet Programming Essentials</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+<div class="title-logo">
+<h1>Internet Programming Essentials</h1>
+        <img src="images/logo.jfif" alt="Logo" id="logo" class="logo">
+</div>
+<button id="menu-button" class="menu-button">☰ Menu</button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="js-interaction.html">JavaScript</a></li>
+                <li><a href="css-grid-layout.html">CSS Grid</a></li>
+                <li><a href="bootstrap-layout.html">Bootstrap</a></li>
+                <li><a href="projects-showcase.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Bootstrap Layout</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <article>
+                        <h2>Introduction to Bootstrap Layout</h2>
+                        <p>Bootstrap is a popular front-end framework that simplifies the creation of responsive web designs through its flexible grid system. The layout is built on a 12-column grid, allowing developers to define rows and columns that adapt to different screen sizes seamlessly. By using classes like <code>.container</code>, <code>.row</code>, and <code>.col</code>, Bootstrap provides an intuitive way to structure web content. It also supports predefined breakpoints for small, medium, large, and extra-large devices, ensuring consistent layouts across a wide range of devices.</p>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article>
+                        <h2>Benefits of Bootstrap Layout</h2>
+                        <p>One of the key benefits of Bootstrap's layout system is its responsiveness. By applying classes like <code>.col-sm-6</code> or <code>.col-lg-4</code>, developers can create designs that adjust automatically based on the screen size, eliminating the need for extensive media queries. Additionally, the framework supports alignment and spacing utilities such as <code>align-items-center</code> and <code>g-3</code>, which streamline the process of customizing grid layouts. This versatility makes Bootstrap an excellent choice for building both simple and complex layouts efficiently.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Yacob Hiben</p>
+    </footer>
+</body>
+</html>
